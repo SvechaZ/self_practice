@@ -1,0 +1,46 @@
+เนื่องจาก self practice week 4 หนูได้ฝึกการใช้ .reduce() ไป week 5 หนูเลยฝึก .map() เพื่อให้เข้าการใช้ method JS มากขึ้น 
+======================================================================================
+ได้รุ้อะไรบ้าง ?
+    ได้ฝึกลองใช้ method .map() คือ การแปลงค่าใน array โดยขนาด array เท่าเดิม รวมถึงการใช้ property .length เพราะในข้อนี้
+     const ary = ["cat", "elephant", "hi"]
+
+     let str = ary.map(word => word.length)// here ในตอนแรกหนูใช้ .length() ซึ่งนั่นทำให้เกิด error เพราะว่าการใช้ .length() คือการใช้ใน function จึงทำให้รู้ข้อแตกต่างจอง .length() กับ length
+ 
+     console.log(str)
+ ======================================================================================
+ code แต่ละข้อทำงานยังไง ?
+    1.  const num = [1,2,3,4]
+        let squareNumbers = num.map(num => num ** 2)
+        console.log(squareNumbers)
+
+    ข้อนี้หนูลองทำแบบพื้นฐานมาก ๆ ก่อน code ในข้อนี้ต้องการค่าใน array ยกกำลังสองทุกตัว และ return ออกมา หนูเลยใช้ arrow function เพื่อบอกให้ num ** 2 จึงทำให้ได้ค่าแบบยกกำลังออกมา
+
+    2.  const ary = ["cat", "elephant", "hi"]
+
+        let str = ary.map(word => word.length)
+
+        console.log(str)
+    code นี้ให้หาความยาวของ string ที่อยู่ใน array ว่าที่เท่า่ไหร่ในแต่ละตัวหนูเลยใช้ .length ในการหาความยาว string แต่ละตัว ซึ่งตอนแรกหนูทำเป็น .length() ซึ่งมันคือการใช้แบบ function ซึ่งทำให้เกิด error 
+
+    3.const person = [
+    
+        {name : "A" , age : 20},
+        {name : "B" , age : 25}
+    ]
+
+        let text = person.map(person => person.name)
+        console.log(text)
+
+    code นี้ให้รับค่า array ของ object และ return แค่ชื่อใน array  หนูเขียน object แบบ literal เพื่อความเข้าใจในการทำงาน และใช้ arrow function ในการออกคำสั่งให้เ้ข้าถึงแค่ .name 
+
+    4.const number = [2,3,4]
+
+        let sqr = number.map(number => {
+            return {num:number, sqr:number ** 2}
+        })
+
+        console.log(sqr)
+    code นี้ให้เปลี่ยน array เป็น object และทำให้เป็นกำลังสองโดยทำตาม fomat ที่โจทย์ต้องการคือ num:number , sqr : number**2
+ ======================================================================================
+ ได้ใช้ AI ไหม ?
+    ใช้ในการคิดโจทย์แต่ละข้อขึ้นมา
